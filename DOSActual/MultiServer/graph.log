@@ -1,0 +1,40 @@
+2024-09-27 19:54:19,552 - INFO - Checking edge: a -> c
+2024-09-27 19:54:19,556 - INFO - Checking edge: c -> d
+2024-09-27 19:54:19,567 - WARNING - Path does not exist. Vertex d does not exist.
+2024-09-27 19:54:19,575 - INFO - Checking edge: a -> e
+2024-09-27 19:54:19,578 - WARNING - Path does not exist. Vertex f does not exist.
+54:19,366 - INFO - Vertex a is added successfully.
+2024-09-27 19:54:19,394 - INFO - Edge (d, f) does not exists.
+2024-09-27 19:54:19,399 - WARNING - Failed to remove edge (d, f), as it does not exist.
+2024-09-27 19:54:19,483 - INFO - Neighbors of e are: ['a']
+2024-09-27 19:54:19,513 - INFO - All vertices: dict_keys(['c', 'd', 'e', 'b', 'a'])
+2024-09-27 19:54:19,529 - INFO - All edges: dict_values([['b', 'd'], ['c'], ['a'], [], []])
+2024-09-27 19:54:19,544 - INFO - Neighbors of c are: ['b', 'd']
+2024-09-27 19:54:19,554 - INFO - Vertex c exists.
+2024-09-27 19:54:19,555 - INFO - Vertex d exists.
+2024-09-27 19:54:19,556 - INFO - Edge (c, d) exists.
+2024-09-27 19:54:19,577 - INFO - Vertex e exists.
+2024-09-27 19:54:19,578 - INFO - Vertex f does not exist.
+ - Neighbors of a are: ['c', 'e', 'g']
+2024-09-27 19:54:19,549 - INFO - Vertex a exists.
+2024-09-27 19:54:19,551 - INFO - Vertex c exists.
+2024-09-27 19:54:19,553 - INFO - Edge (a, c) exists.
+2024-09-27 19:54:19,561 - INFO - Vertex a exists.
+2024-09-27 19:54:19,564 - INFO - Vertex d does not exist.
+2024-09-27 19:54:19,572 - INFO - Vertex a exists.
+2024-09-27 19:54:19,574 - INFO - Vertex e exists.
+2024-09-27 19:54:19,575 - INFO - Edge (a, e) exists.
+2024-09-27 19:54:19,580 - INFO - Vertex y does not exist.
+2024-09-27 19:54:19,582 - INFO - Vertex x does not exist.
+2024-09-27 19:54:19,584 - INFO - Vertex b exists.
+2024-09-27 19:54:19,586 - INFO - Vertex x does not exist.
+2024-09-27 19:54:19,588 - INFO - Vertex b exists.
+2024-09-27 19:54:19,589 - INFO - Vertex d does not exist.
+2024-09-27 19:54:19,592 - INFO - Vertex a exists.
+2024-09-27 19:54:19,594 - INFO - Vertex d does not exist.
+2024-09-27 19:54:19,596 - INFO - Vertex a exists.
+2024-09-27 19:54:19,597 - INFO - Vertex f does not exist.
+2024-09-27 19:54:19,599 - INFO - Vertex a exists.
+2024-09-27 19:54:19,601 - INFO - Vertex d does not exist.
+2024-09-27 19:54:19,604 - INFO - Vertex b exists.
+2024-09-27 19:54:19,605 - INFO - Vertex w does not exist.

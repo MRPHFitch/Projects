@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package Graph;
+
+service Graph {
+  rpc getAllVertices(Empty) returns (getAllResponse);
+  rpc getAllEdges(Empty) returns (getAllResponse);
+  rpc addVertex(Vertex) returns (Response);
+  rpc addEdge(Edge) returns (EdgeResponse);
+  rpc removeVertex(Vertex) returns (Response);
+  rpc removeEdge(Edge) returns (Response);
+  rpc hasVertex(Vertex) returns (YesNo);
+  rpc hasEdge(Edge) returns (YesNo);
+  rpc getNeighbors(Vertex) returns (getAllResponse);
+  rpc hasPath(EdgeList) returns (YesNo);
+  rpc getPath(Edge) returns (Multiple);
+  rpc shortestPath(Edge) returns (Multiple);
+  rpc printGraph(Empty) returns (getAllResponse);
+  rpc Shutdown(Empty) returns (Response);
+  rpc ClientConnect(Empty) returns (Response);
+}
+
+message Empty{}
+message Vertex {
+  string vert=1;
+}
+message Edge{
+  Vertex to=1;
+  Vertex start=2;
+}
+message EdgeList{
+  repeated Vertex edges=1;
+}
+message getAllResponse {
+  repeated string response=1;
+}
+message EdgeResponse{
+  string edges=1;
+}
+message Response{
+  string message=1;
+}
+message Multiple{
+  oneof result{
+    string message=1;
+    EdgeList edges=2;
+  }
+}
+message YesNo{
+  bool tf=1;
+}

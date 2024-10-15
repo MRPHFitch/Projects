@@ -1,0 +1,195 @@
+2024-09-23 15:35:37,154 - INFO - Graph is initialized.
+2024-09-23 15:35:37,154 - INFO - Output file created.
+2024-09-23 15:35:37,154 - INFO - Finding input file: input.txt
+2024-09-23 15:35:37,154 - INFO - Opening output file: output.txt
+2024-09-23 15:35:37,154 - INFO - Processing file : input.txt
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-vertex <a>
+2024-09-23 15:35:37,154 - INFO - Adding vertex : a
+2024-09-23 15:35:37,154 - INFO - Vertex a is added successfully.
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-vertex <a>
+2024-09-23 15:35:37,154 - INFO - Adding vertex : a
+2024-09-23 15:35:37,154 - WARNING - Failed to add vertex a, as it already exists.
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-vertex <b>
+2024-09-23 15:35:37,154 - INFO - Adding vertex : b
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-vertex <c>
+2024-09-23 15:35:37,154 - INFO - Vertex b is added successfully.
+2024-09-23 15:35:37,154 - INFO - Adding vertex : c
+2024-09-23 15:35:37,154 - INFO - Vertex c is added successfully.
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-vertex <d>
+2024-09-23 15:35:37,154 - INFO - Adding vertex : d
+2024-09-23 15:35:37,154 - INFO - Vertex d is added successfully.
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-vertex <e>
+2024-09-23 15:35:37,154 - INFO - Adding vertex : e
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-edge <a, b>
+2024-09-23 15:35:37,154 - INFO - Vertex e is added successfully.
+2024-09-23 15:35:37,154 - INFO - Adding edge: (a, b)
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-edge <a, b>
+2024-09-23 15:35:37,154 - INFO - Edge (a, b) added
+2024-09-23 15:35:37,154 - INFO - Adding edge: (a, b)
+2024-09-23 15:35:37,154 - WARNING - Edge already exists.
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-edge <b, a>
+2024-09-23 15:35:37,154 - INFO - Adding edge: (b, a)
+2024-09-23 15:35:37,154 - INFO - Edge (b, a) added
+2024-09-23 15:35:37,154 - DEBUG - Processing command: add-edge <b, c>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (b, c)
+2024-09-23 15:35:37,167 - INFO - Edge (b, c) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <a, c>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (a, c)
+2024-09-23 15:35:37,167 - INFO - Edge (a, c) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <c, b>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (c, b)
+2024-09-23 15:35:37,167 - INFO - Edge (c, b) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <c, d>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (c, d)
+2024-09-23 15:35:37,167 - INFO - Edge (c, d) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <d, c>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (d, c)
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <a, e>
+2024-09-23 15:35:37,167 - INFO - Edge (d, c) added
+2024-09-23 15:35:37,167 - INFO - Adding edge: (a, e)
+2024-09-23 15:35:37,167 - INFO - Edge (a, e) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <e, a>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (e, a)
+2024-09-23 15:35:37,167 - INFO - Edge (e, a) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: add-edge <a, g>
+2024-09-23 15:35:37,167 - INFO - Adding edge: (a, g)
+2024-09-23 15:35:37,167 - INFO - Adding vertex : g
+2024-09-23 15:35:37,167 - INFO - Vertex g is added successfully.
+2024-09-23 15:35:37,167 - INFO - Edge (a, g) added
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-vertex <a>
+2024-09-23 15:35:37,167 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,167 - INFO - Vertex a exists.
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-vertex <f>
+2024-09-23 15:35:37,167 - INFO - Looking for vertex f)
+2024-09-23 15:35:37,167 - INFO - Vertex f does not exist.
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-edge <a, b>
+2024-09-23 15:35:37,167 - INFO - Looking for edge (a, b)
+2024-09-23 15:35:37,167 - INFO - Edge (a, b) exists.
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-edge <d, f>
+2024-09-23 15:35:37,167 - INFO - Looking for edge (d, f)
+2024-09-23 15:35:37,167 - INFO - Edge (d, f) does not exists.
+2024-09-23 15:35:37,167 - DEBUG - Processing command: remove-edge <a, b>
+2024-09-23 15:35:37,167 - INFO - Removing edge: (a, b)
+2024-09-23 15:35:37,167 - INFO - Edge (a, b) is removed successfully.
+2024-09-23 15:35:37,167 - DEBUG - Processing command: remove-edge <d, f>
+2024-09-23 15:35:37,167 - INFO - Removing edge: (d, f)
+2024-09-23 15:35:37,167 - WARNING - Failed to remove edge (d, f), as it does not exist.
+2024-09-23 15:35:37,167 - DEBUG - Processing command: remove-vertex <e>
+2024-09-23 15:35:37,167 - INFO - Removing vertex: e
+2024-09-23 15:35:37,167 - INFO - Getting neighbors of e)
+2024-09-23 15:35:37,167 - INFO - Neighbors of e are: ['a']
+2024-09-23 15:35:37,167 - WARNING - Cannot remove a vertex with neighbors
+2024-09-23 15:35:37,167 - DEBUG - Processing command: remove-vertex <f>
+2024-09-23 15:35:37,167 - INFO - Removing vertex: f
+2024-09-23 15:35:37,167 - WARNING - Vertex does not exist
+2024-09-23 15:35:37,167 - DEBUG - Processing command: remove-vertex <>
+2024-09-23 15:35:37,167 - INFO - Removing vertex: 
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-vertex <f>
+2024-09-23 15:35:37,167 - WARNING - Cannot remove empty vertex
+2024-09-23 15:35:37,167 - INFO - Looking for vertex f)
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-edge <a, b>
+2024-09-23 15:35:37,167 - INFO - Vertex f does not exist.
+2024-09-23 15:35:37,167 - INFO - Looking for edge (a, b)
+2024-09-23 15:35:37,167 - DEBUG - Processing command: get-all-vertices
+2024-09-23 15:35:37,167 - INFO - Edge (a, b) does not exists.
+2024-09-23 15:35:37,167 - INFO - All vertices: dict_keys(['a', 'b', 'c', 'd', 'e', 'g'])
+2024-09-23 15:35:37,167 - DEBUG - Processing command: get-all-edges
+2024-09-23 15:35:37,167 - INFO - All edges: dict_values([['c', 'e', 'g'], ['a', 'c'], ['b', 'd'], ['c'], ['a'], []])
+2024-09-23 15:35:37,167 - DEBUG - Processing command: get-neighbors(b)
+2024-09-23 15:35:37,167 - INFO - Getting neighbors of b)
+2024-09-23 15:35:37,167 - INFO - Neighbors of b are: ['a', 'c']
+2024-09-23 15:35:37,167 - DEBUG - Processing command: get-neighbors(a)
+2024-09-23 15:35:37,167 - INFO - Getting neighbors of a)
+2024-09-23 15:35:37,167 - DEBUG - Processing command: get-neighbors(c)
+2024-09-23 15:35:37,167 - INFO - Neighbors of a are: ['c', 'e', 'g']
+2024-09-23 15:35:37,167 - INFO - Getting neighbors of c)
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-path <a, c, d>
+2024-09-23 15:35:37,167 - INFO - Neighbors of c are: ['b', 'd']
+2024-09-23 15:35:37,167 - INFO - Finding path for ['a', 'c', 'd']
+2024-09-23 15:35:37,167 - DEBUG - Processing command: has-path <a, d, b>
+2024-09-23 15:35:37,167 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,167 - INFO - Vertex a exists.
+2024-09-23 15:35:37,167 - INFO - Looking for vertex c)
+2024-09-23 15:35:37,167 - INFO - Vertex c exists.
+2024-09-23 15:35:37,167 - INFO - Looking for edge (a, c)
+2024-09-23 15:35:37,167 - INFO - Edge (a, c) exists.
+2024-09-23 15:35:37,167 - INFO - Looking for vertex c)
+2024-09-23 15:35:37,167 - INFO - Vertex c exists.
+2024-09-23 15:35:37,167 - INFO - Looking for vertex d)
+2024-09-23 15:35:37,167 - INFO - Vertex d exists.
+2024-09-23 15:35:37,167 - INFO - Looking for edge (c, d)
+2024-09-23 15:35:37,167 - INFO - Finding path for ['a', 'd', 'b']
+2024-09-23 15:35:37,182 - INFO - Edge (c, d) exists.
+2024-09-23 15:35:37,182 - DEBUG - Processing command: has-path <a, e, f, d>
+2024-09-23 15:35:37,182 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,182 - INFO - Looking for vertex d)
+2024-09-23 15:35:37,182 - INFO - Finding path for ['a', 'e', 'f', 'd']
+2024-09-23 15:35:37,182 - INFO - Vertex a exists.
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-path <y, x>
+2024-09-23 15:35:37,182 - INFO - Vertex d exists.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,182 - INFO - Looking for vertex d)
+2024-09-23 15:35:37,182 - INFO - Getting path: y ... x.
+2024-09-23 15:35:37,182 - INFO - LAST VERTEX d HAS BEEN REACHED.
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-path <b, x>
+2024-09-23 15:35:37,182 - INFO - Vertex a exists.
+2024-09-23 15:35:37,182 - INFO - Vertex d exists.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex y)
+2024-09-23 15:35:37,182 - INFO - Found path ['a', 'c', 'd'].
+2024-09-23 15:35:37,182 - INFO - Looking for vertex e)
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-path <b, d>
+2024-09-23 15:35:37,182 - INFO - Getting path: b ... x.
+2024-09-23 15:35:37,182 - INFO - Looking for edge (a, d)
+2024-09-23 15:35:37,182 - INFO - Edge (a, d) does not exists.
+2024-09-23 15:35:37,182 - INFO - Vertex e exists.
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-path <a, d>
+2024-09-23 15:35:37,182 - INFO - Looking for vertex b)
+2024-09-23 15:35:37,182 - INFO - Vertex y does not exist.
+2024-09-23 15:35:37,182 - WARNING - PATH DOES NOT EXIST. EDGE <a, d> DOES NOT EXIST.
+2024-09-23 15:35:37,182 - INFO - Getting path: b ... d.
+2024-09-23 15:35:37,182 - INFO - Looking for edge (a, e)
+2024-09-23 15:35:37,182 - INFO - Vertex b exists.
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-path <a, f>
+2024-09-23 15:35:37,182 - INFO - No path found, Vertex y does not exist.
+2024-09-23 15:35:37,182 - INFO - Getting path: a ... d.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex b)
+2024-09-23 15:35:37,182 - INFO - Edge (a, e) exists.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex e)
+2024-09-23 15:35:37,182 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,182 - INFO - Vertex a exists.
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-shortest-path <a, d>
+2024-09-23 15:35:37,182 - INFO - Vertex b exists.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex x)
+2024-09-23 15:35:37,182 - INFO - Vertex e exists.
+2024-09-23 15:35:37,182 - INFO - Getting path: a ... f.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex d)
+2024-09-23 15:35:37,182 - INFO - Vertex d exists.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex d)
+2024-09-23 15:35:37,182 - DEBUG - Processing command: get-shortest-path <b, w>
+2024-09-23 15:35:37,182 - INFO - Vertex x does not exist.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex f)
+2024-09-23 15:35:37,182 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,182 - INFO - Vertex a exists.
+2024-09-23 15:35:37,182 - WARNING - Path found: ['a', 'c', 'd']
+2024-09-23 15:35:37,182 - INFO - Vertex d exists.
+2024-09-23 15:35:37,182 - INFO - No path found. Vertex x does not exist
+2024-09-23 15:35:37,182 - INFO - Finding shortest path for b ... w
+2024-09-23 15:35:37,182 - INFO - Looking for vertex b)
+2024-09-23 15:35:37,182 - INFO - Finding shortest path for a ... d
+2024-09-23 15:35:37,182 - INFO - Looking for vertex f)
+2024-09-23 15:35:37,182 - WARNING - Path found: ['b', 'c', 'd']
+2024-09-23 15:35:37,182 - INFO - Vertex f does not exist.
+2024-09-23 15:35:37,182 - INFO - Vertex b exists.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex w)
+2024-09-23 15:35:37,182 - INFO - Vertex f does not exist.
+2024-09-23 15:35:37,182 - WARNING - PATH DOES NOT EXIST. PROCEEDING NODE f DOES NOT EXIST.
+2024-09-23 15:35:37,182 - INFO - Looking for vertex a)
+2024-09-23 15:35:37,182 - INFO - Vertex w does not exist.
+2024-09-23 15:35:37,182 - INFO - No path found. Vertex f does not exist
+2024-09-23 15:35:37,182 - INFO - Vertex a exists.
+2024-09-23 15:35:37,182 - WARNING - No path found. Vertex w does not exist
+2024-09-23 15:35:37,182 - INFO - Looking for vertex d)
+2024-09-23 15:35:37,182 - INFO - Vertex d exists.
+2024-09-23 15:35:37,182 - INFO - Shortest path found: ['a', 'c', 'd']
+2024-09-23 15:35:37,182 - INFO - PRINTING GRAPH...
+2024-09-23 15:35:37,182 - DEBUG - Graph structures : {'a': ['c', 'e', 'g'], 'b': ['a', 'c'], 'c': ['b', 'd'], 'd': ['c'], 'e': ['a'], 'g': []}

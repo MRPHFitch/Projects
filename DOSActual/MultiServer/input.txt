@@ -1,0 +1,43 @@
+add-vertex <a>
+add-vertex <a>
+add-vertex <b>
+add-vertex <c>
+add-vertex <d>
+add-vertex <e>
+add-edge <a, b>
+add-edge <a, b>
+add-edge <b, a>
+add-edge <b, c>
+add-edge <a, c>
+add-edge <c, b>
+add-edge <c, d>
+add-edge <d, c>
+add-edge <a, e>
+add-edge <e, a>
+add-edge <a, g>
+has-vertex <a>
+has-vertex <f>
+has-edge <a, b>
+has-edge <d, f>
+remove-edge <a, b>
+remove-edge <d, f>
+remove-vertex <e>
+remove-vertex <f>
+remove-vertex <>
+has-vertex <f>
+has-edge <a, b>
+get-all-vertices
+get-all-edges
+get-neighbors(b)
+get-neighbors(a)
+get-neighbors(c)
+has-path <a, c, d>
+has-path <a, d, b>
+has-path <a, e, f, d>
+get-path <y, x>
+get-path <b, x> 
+get-path <b, d> 
+get-path <a, d>
+get-path <a, f>
+get-shortest-path <a, d>
+get-shortest-path <b, w>

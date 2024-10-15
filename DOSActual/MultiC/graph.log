@@ -1,0 +1,202 @@
+2024-09-27 19:01:24,940 - INFO - Graph is initialized.
+2024-09-27 19:01:27,032 - INFO - Vertex 1 is added successfully.
+2024-09-27 19:01:27,038 - INFO - Vertex a is added successfully.
+2024-09-27 19:01:27,040 - INFO - Vertex b is added successfully.
+2024-09-27 19:01:27,043 - INFO - Vertex a exists.
+2024-09-27 19:01:27,047 - INFO - Vertex c is added successfully.
+2024-09-27 19:01:27,049 - INFO - Edge (a, b) exists.
+2024-09-27 19:01:27,056 - INFO - Edge (a, b) is removed successfully.
+2024-09-27 19:01:27,060 - INFO - Vertex d is added successfully.
+2024-09-27 19:01:27,070 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'c', 'd'])
+2024-09-27 19:01:27,079 - INFO - Neighbors of a are: []
+2024-09-27 19:01:27,083 - INFO - Vertex e is added successfully.
+2024-09-27 19:01:27,086 - INFO - Neighbors of c are: []
+2024-09-27 19:01:27,226 - INFO - Vertex f does not exist.
+2024-09-27 19:01:27,231 - INFO - Vertex f is added successfully.
+2024-09-27 19:01:27,236 - INFO - All edges: dict_values([[], [], ['c', 'f'], ['e'], ['b'], []])
+2024-09-27 19:01:27,238 - INFO - Neighbors of d are: ['e']
+2024-09-27 19:01:27,240 - INFO - Edge (b, c) exists.
+2024-09-27 19:01:27,242 - INFO - Vertex g is added successfully.
+2024-09-27 19:01:27,255 - INFO - Neighbors of b are: ['c', 'f']
+2024-09-27 19:01:27,258 - INFO - Vertex g exists.
+2024-09-27 19:01:27,260 - INFO - Edge (d, e) is removed successfully.
+2024-09-27 19:01:27,263 - INFO - Vertex h is added successfully.
+2024-09-27 19:01:27,265 - WARNING - Failed to add vertex h, as it already exists.
+2024-09-27 19:01:27,268 - INFO - Edge (g, h) exists.
+2024-09-27 19:01:27,271 - INFO - Neighbors of g are: ['h']
+2024-09-27 19:01:27,276 - INFO - Neighbors of a are: ['g']
+2024-09-27 19:01:27,280 - INFO - Vertex i is added successfully.
+2024-09-27 19:01:27,289 - INFO - Vertex j does not exist.
+2024-09-27 19:01:27,291 - INFO - Vertex j is added successfully.
+2024-09-27 19:01:27,293 - INFO - Vertex z is added successfully.
+2024-09-27 19:01:27,296 - INFO - Edge (h, a) is removed successfully.
+2024-09-27 19:01:27,298 - INFO - Vertex y is added successfully.
+2024-09-27 19:01:27,301 - INFO - Vertex x is added successfully.
+2024-09-27 19:01:27,302 - INFO - Neighbors of f are: []
+2024-09-27 19:01:27,303 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x'])
+2024-09-27 19:01:27,304 - INFO - Vertex w is added successfully.
+2024-09-27 19:01:27,306 - INFO - Edge (b, f) is removed successfully.
+2024-09-27 19:01:27,307 - INFO - Vertex t is added successfully.
+2024-09-27 19:01:27,309 - INFO - Edge (j, i) does not exists.
+2024-09-27 19:01:27,310 - INFO - Vertex v is added successfully.
+2024-09-27 19:01:27,312 - INFO - Neighbors of i are: ['g']
+2024-09-27 19:01:27,316 - INFO - Vertex k does not exist.
+2024-09-27 19:01:27,319 - INFO - Vertex k is added successfully.
+2024-09-27 19:01:27,324 - INFO - Edge (g, h) is removed successfully.
+2024-09-27 19:01:27,328 - INFO - All edges: dict_values([[], ['g'], ['c', 'j'], [], ['b', 'k'], [], ['i'], ['g'], ['e'], ['y'], [], [], [], [], [], []])
+2024-09-27 19:01:27,355 - INFO - Edge (h, i) exists.
+2024-09-27 19:01:27,357 - INFO - Neighbors of b are: ['c', 'j']
+2024-09-27 19:01:27,363 - INFO - Edge (e, k) is removed successfully.
+2024-09-27 19:01:27,366 - INFO - Neighbors of j are: ['e']
+2024-09-27 19:01:27,381 - INFO - Vertex l is added successfully.
+2024-09-27 19:01:27,391 - INFO - Vertex a exists.
+2024-09-27 19:01:27,394 - INFO - Vertex m does not exist.
+2024-09-27 19:01:27,395 - INFO - Vertex x exists.
+2024-09-27 19:01:27,397 - INFO - Vertex m is added successfully.
+2024-09-27 19:01:27,403 - INFO - Edge (w, v) exists.
+2024-09-27 19:01:27,406 - INFO - Edge (t, w) does not exists.
+2024-09-27 19:01:27,408 - INFO - Edge (z, y) is removed successfully.
+2024-09-27 19:01:27,417 - WARNING - Failed to remove edge (d, f), as it does not exist.
+2024-09-27 19:01:27,432 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x', 'w', 't', 'v', 'k', 'l', 'm'])
+2024-09-27 19:01:27,433 - INFO - Neighbors of e are: ['b']
+2024-09-27 19:01:27,434 - INFO - All edges: dict_values([[], ['g'], ['c', 'j'], [], ['b'], [], ['i'], ['g', 'j'], ['e'], ['w'], ['x'], ['z'], ['t', 'y', 'v'], ['v'], ['y'], ['a'], ['k'], []])
+2024-09-27 19:01:27,439 - INFO - Neighbors of j are: ['e']
+2024-09-27 19:01:27,440 - INFO - Vertex g exists.
+2024-09-27 19:01:27,441 - INFO - Edge (k, a) exists.
+2024-09-27 19:01:27,443 - INFO - Edge (a, b) does not exists.
+2024-09-27 19:01:27,448 - INFO - Edge (l, k) is removed successfully.
+2024-09-27 19:01:27,449 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x', 'w', 't', 'v', 'k', 'l', 'm'])
+2024-09-27 19:01:27,451 - INFO - Neighbors of h are: ['i']
+2024-09-27 19:01:27,452 - INFO - All edges: dict_values([[], ['g'], ['c', 'j'], [], ['b'], [], ['i'], ['g', 'j'], ['e'], ['w'], ['x'], ['z'], ['t', 'y', 'v'], ['v'], ['y'], ['a'], [], ['l']])
+2024-09-27 19:01:27,453 - INFO - Vertex n is added successfully.
+2024-09-27 19:01:27,456 - INFO - Neighbors of w are: ['t', 'y', 'v']
+2024-09-27 19:01:27,458 - INFO - Neighbors of v are: ['y']
+2024-09-27 19:01:27,459 - INFO - Vertex o does not exist.
+2024-09-27 19:01:27,462 - INFO - Neighbors of t are: ['v']
+2024-09-27 19:01:27,464 - INFO - Vertex o is added successfully.
+2024-09-27 19:01:27,465 - INFO - Vertex a exists.
+2024-09-27 19:01:27,465 - INFO - Check on edge: a, c
+2024-09-27 19:01:27,465 - INFO - Vertex c does not exist.
+2024-09-27 19:01:27,465 - INFO - Edge (a, c) does not exists.
+2024-09-27 19:01:27,465 - INFO - Vertex c does not exist.
+2024-09-27 19:01:27,465 - INFO - Check on edge: c, d
+2024-09-27 19:01:27,466 - INFO - Vertex d exists.
+2024-09-27 19:01:27,466 - INFO - Edge (c, d) does not exists.
+2024-09-27 19:01:27,466 - INFO - Vertex d exists.
+2024-09-27 19:01:27,467 - INFO - Neighbors of n are: ['m']
+2024-09-27 19:01:27,469 - INFO - Vertex a exists.
+2024-09-27 19:01:27,470 - INFO - Check on edge: a, d
+2024-09-27 19:01:27,471 - INFO - Vertex d exists.
+2024-09-27 19:01:27,471 - INFO - Edge (a, d) does not exists.
+2024-09-27 19:01:27,471 - INFO - Vertex d exists.
+2024-09-27 19:01:27,471 - INFO - Check on edge: d, b
+2024-09-27 19:01:27,471 - INFO - Vertex b exists.
+2024-09-27 19:01:27,471 - INFO - Edge (d, b) does not exists.
+2024-09-27 19:01:27,471 - INFO - Vertex b exists.
+2024-09-27 19:01:27,474 - INFO - Vertex a exists.
+2024-09-27 19:01:27,474 - INFO - Check on edge: a, e
+2024-09-27 19:01:27,474 - INFO - Vertex e exists.
+2024-09-27 19:01:27,474 - INFO - Edge (a, e) does not exists.
+2024-09-27 19:01:27,474 - INFO - Vertex e exists.
+2024-09-27 19:01:27,475 - INFO - Check on edge: e, f
+2024-09-27 19:01:27,475 - INFO - Vertex f does not exist.
+2024-09-27 19:01:27,475 - INFO - Edge (e, f) does not exists.
+2024-09-27 19:01:27,475 - INFO - Vertex f does not exist.
+2024-09-27 19:01:27,475 - INFO - Check on edge: f, d
+2024-09-27 19:01:27,475 - INFO - Vertex d exists.
+2024-09-27 19:01:27,475 - INFO - Edge (f, d) does not exists.
+2024-09-27 19:01:27,475 - INFO - Vertex d exists.
+2024-09-27 19:01:27,477 - INFO - Edge (m, l) is removed successfully.
+2024-09-27 19:01:27,477 - INFO - Vertex y exists.
+2024-09-27 19:01:27,478 - INFO - Vertex x exists.
+2024-09-27 19:01:27,480 - INFO - All edges: dict_values([[], ['g'], ['c', 'j'], [], ['b'], [], ['i'], ['g', 'j'], ['e'], ['w'], ['x'], ['z'], ['t', 'y', 'v'], ['v'], ['y'], ['a'], [], [], ['m'], ['g']])
+2024-09-27 19:01:27,481 - INFO - Vertex b exists.
+2024-09-27 19:01:27,481 - INFO - Vertex x exists.
+2024-09-27 19:01:27,481 - WARNING - Vertex does not exist in graph.
+2024-09-27 19:01:27,484 - INFO - Neighbors of e are: ['b']
+2024-09-27 19:01:27,485 - INFO - Vertex b exists.
+2024-09-27 19:01:27,485 - INFO - Vertex d exists.
+2024-09-27 19:01:27,486 - WARNING - Vertex does not exist in graph.
+2024-09-27 19:01:27,488 - INFO - Vertex p is added successfully.
+2024-09-27 19:01:27,489 - INFO - Vertex a exists.
+2024-09-27 19:01:27,489 - INFO - Vertex d exists.
+2024-09-27 19:01:27,491 - INFO - Vertex a exists.
+2024-09-27 19:01:27,491 - INFO - Vertex f does not exist.
+2024-09-27 19:01:27,493 - INFO - Edge (o, g) is removed successfully.
+2024-09-27 19:01:27,494 - INFO - Vertex a exists.
+2024-09-27 19:01:27,494 - INFO - Vertex d exists.
+2024-09-27 19:01:27,496 - INFO - Edge (g, o) exists.
+2024-09-27 19:01:27,497 - INFO - Vertex b exists.
+2024-09-27 19:01:27,497 - INFO - Vertex w exists.
+2024-09-27 19:01:27,497 - WARNING - Vertex does not exist in graph.
+2024-09-27 19:01:27,498 - INFO - Vertex q does not exist.
+2024-09-27 19:01:27,501 - INFO - Vertex q is added successfully.
+2024-09-27 19:01:27,508 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x', 'w', 't', 'v', 'k', 'l', 'm', 'n', 'o', 'p', 'q'])
+2024-09-27 19:01:27,509 - INFO - Neighbors of p are: ['n']
+2024-09-27 19:01:27,512 - INFO - Edge (p, n) is removed successfully.
+2024-09-27 19:01:27,518 - INFO - Neighbors of g are: ['o']
+2024-09-27 19:01:27,519 - INFO - Vertex r is added successfully.
+2024-09-27 19:01:27,525 - WARNING - Failed to add vertex a, as it already exists.
+2024-09-27 19:01:27,528 - WARNING - Failed to add vertex a, as it already exists.
+2024-09-27 19:01:27,533 - WARNING - Failed to add vertex b, as it already exists.
+2024-09-27 19:01:27,535 - INFO - Vertex c is added successfully.
+2024-09-27 19:01:27,537 - WARNING - Failed to add vertex d, as it already exists.
+2024-09-27 19:01:27,542 - WARNING - Failed to add vertex e, as it already exists.
+2024-09-27 19:01:27,580 - INFO - Vertex a exists.
+2024-09-27 19:01:27,584 - INFO - Vertex f does not exist.
+2024-09-27 19:01:27,590 - INFO - Edge (a, b) exists.
+2024-09-27 19:01:27,592 - INFO - Edge (d, f) does not exists.
+2024-09-27 19:01:27,596 - INFO - Edge (a, b) is removed successfully.
+2024-09-27 19:01:27,607 - WARNING - Failed to remove edge (d, f), as it does not exist.
+2024-09-27 19:01:27,613 - INFO - Neighbors of e are: ['b', 'a']
+2024-09-27 19:01:27,629 - INFO - Vertex f does not exist.
+2024-09-27 19:01:27,637 - INFO - Edge (a, b) does not exists.
+2024-09-27 19:01:27,644 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x', 'w', 't', 'v', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 'c'])
+2024-09-27 19:01:27,647 - INFO - All edges: dict_values([[], ['g', 'c', 'e'], ['c', 'j', 'a'], ['c'], ['b', 'a'], ['o'], ['i'], ['g', 'j'], ['e'], ['w'], ['x'], ['z'], ['t', 'y', 'v'], ['v'], ['y'], ['a'], [], [], ['m'], [], [], ['p'], ['o'], ['b', 'd']])
+2024-09-27 19:01:27,650 - INFO - Neighbors of b are: ['c', 'j', 'a']
+2024-09-27 19:01:27,652 - INFO - Neighbors of a are: ['g', 'c', 'e']
+2024-09-27 19:01:27,654 - INFO - Neighbors of c are: ['b', 'd']
+2024-09-27 19:01:27,658 - INFO - Neighbors of g are: ['o']
+2024-09-27 19:01:27,660 - INFO - Vertex f is added successfully.
+2024-09-27 19:01:27,664 - WARNING - Failed to add vertex g, as it already exists.
+2024-09-27 19:01:27,668 - WARNING - Failed to add vertex h, as it already exists.
+2024-09-27 19:01:27,670 - WARNING - Failed to add vertex i, as it already exists.
+2024-09-27 19:01:27,672 - WARNING - Failed to add vertex j, as it already exists.
+2024-09-27 19:01:27,691 - INFO - Vertex g exists.
+2024-09-27 19:01:27,693 - INFO - Vertex h exists.
+2024-09-27 19:01:27,696 - INFO - Edge (f, g) exists.
+2024-09-27 19:01:27,699 - INFO - Edge (g, h) exists.
+2024-09-27 19:01:27,701 - INFO - Edge (h, i) is removed successfully.
+2024-09-27 19:01:27,702 - INFO - Neighbors of i are: ['g', 'j']
+2024-09-27 19:01:27,704 - WARNING - Failed to add vertex k, as it already exists.
+2024-09-27 19:01:27,727 - INFO - Vertex k exists.
+2024-09-27 19:01:27,730 - INFO - Edge (k, a) exists.
+2024-09-27 19:01:27,732 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x', 'w', 't', 'v', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 'c', 'f'])
+2024-09-27 19:01:27,735 - INFO - All edges: dict_values([[], ['g', 'c', 'e'], ['c', 'j', 'a'], ['c'], ['b', 'a'], ['o', 'h'], [], ['g', 'j'], ['e', 'f'], ['w'], ['x'], ['z'], ['t', 'y', 'v'], ['v'], ['y'], ['a', 'b', 'c', 'd', 'e'], [], [], ['m'], [], [], ['p'], ['o'], ['b', 'd'], ['g']])
+2024-09-27 19:01:27,739 - INFO - Neighbors of k are: ['a', 'b', 'c', 'd', 'e']
+2024-09-27 19:01:27,741 - WARNING - Failed to add vertex l, as it already exists.
+2024-09-27 19:01:27,755 - INFO - Edge (l, g) is removed successfully.
+2024-09-27 19:01:27,757 - INFO - Neighbors of j are: ['e', 'f']
+2024-09-27 19:01:27,760 - WARNING - Failed to add vertex m, as it already exists.
+2024-09-27 19:01:27,768 - WARNING - Failed to add vertex n, as it already exists.
+2024-09-27 19:01:27,772 - WARNING - Failed to add vertex o, as it already exists.
+2024-09-27 19:01:27,779 - WARNING - Failed to add vertex p, as it already exists.
+2024-09-27 19:01:27,786 - WARNING - Failed to add vertex q, as it already exists.
+2024-09-27 19:01:27,792 - WARNING - Failed to add vertex r, as it already exists.
+2024-09-27 19:01:27,794 - INFO - Vertex s is added successfully.
+2024-09-27 19:01:27,800 - WARNING - Failed to add vertex s, as it already exists.
+2024-09-27 19:01:27,806 - WARNING - Failed to add vertex t, as it already exists.
+2024-09-27 19:01:27,811 - INFO - Vertex u is added successfully.
+2024-09-27 19:01:27,812 - WARNING - Failed to add vertex u, as it already exists.
+2024-09-27 19:01:27,819 - WARNING - Failed to add vertex v, as it already exists.
+2024-09-27 19:01:27,830 - WARNING - Failed to add vertex w, as it already exists.
+2024-09-27 19:01:27,837 - WARNING - Failed to add vertex x, as it already exists.
+2024-09-27 19:01:27,847 - WARNING - Failed to add vertex y, as it already exists.
+2024-09-27 19:01:27,856 - WARNING - Failed to add vertex z, as it already exists.
+2024-09-27 19:01:27,862 - INFO - Vertex x exists.
+2024-09-27 19:01:27,867 - INFO - Edge (u, v) exists.
+2024-09-27 19:01:27,869 - INFO - Edge (t, u) is removed successfully.
+2024-09-27 19:01:27,874 - INFO - Neighbors of v are: ['y', 'w']
+2024-09-27 19:01:27,878 - INFO - All vertices: dict_keys(['1', 'a', 'b', 'd', 'e', 'g', 'h', 'i', 'j', 'z', 'y', 'x', 'w', 't', 'v', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 'c', 'f', 's', 'u'])
+2024-09-27 19:01:27,882 - INFO - All edges: dict_values([[], ['g', 'c', 'e'], ['c', 'j', 'a'], ['c'], ['b', 'a'], ['o', 'h'], [], ['g', 'j'], ['e', 'f'], ['w'], ['x', 'z'], ['z', 'y'], ['t', 'y', 'v', 'x'], ['v'], ['y', 'w'], ['a', 'b', 'c', 'd', 'e'], ['f'], ['n'], ['m', 'o'], ['p'], ['q'], ['p', 'r'], ['o', 's'], ['b', 'd'], ['g'], ['t'], ['v']])
+2024-09-27 19:01:27,884 - INFO - Neighbors of m are: ['n']

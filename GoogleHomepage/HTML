@@ -1,0 +1,106 @@
+<HTML>
+<head>
+<style>
+header {
+  font-size: 10px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  
+}
+
+li {
+  display: inline;
+  text-decoration: none;
+  }
+  
+  li a {
+  padding: 4px;
+  color: #696969;
+  text-decoration: none;
+  }
+  
+li a:hover {
+text-decoration: underline;
+}
+ 
+.google {
+  padding: px;
+  margin: 100px 0px 10px 0px;
+  position: relative;
+  left: 40%;
+}
+
+.box {
+text-align: center;
+}
+
+#search{
+text-align: center;
+width: 350px;
+border-radius: 20px;
+padding: 5px;
+}
+
+.buttons {
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+
+#lucky {
+border-radius: 3px;
+background-color: #f9f9f9;
+padding: 5px;
+}
+
+#carbon{
+margin: 0 0 0 27%;
+}
+
+footer{
+background-color: #f9f9f9;
+margin: 200px 0px 0px 0px;
+font-size: 12px;
+}
+
+  </style>
+
+
+<header>
+<ul>
+<li><a href= "https://about.google/?fg=1&utm_source=google-US&utm_medium=referral&utm_campaign=hp-header">About</a></li>
+<li><a href="https://store.google.com/US/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=en-US">Store</a></li>
+<li style=float:right><a href="https://www.google.com/imghp?hl=en&tab=wi&ogbl">Images</a></li>
+<li style=float:right><a href="https://mail.google.com/">Gmail</a></li>
+</header>
+
+<main>
+<div class="google">
+<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="">
+</div>
+
+<div class="box">
+<input id="search" type=text placeholder= "Search The Google">
+</div>
+
+<p class="buttons">
+<button id="lucky" type= "submit"> Google Search</button>
+<button id="lucky" type= "submit"> I'm Feeling Lucky</button>
+</p>
+
+</main>
+
+<footer id=hover>
+<ul>
+<li><a href="https://ads.google.com/intl/en_us/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a></li>
+<li><a href="https://smallbusiness.withgoogle.com/?subid=us-en-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=us-en_US-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/">Business</a></li>
+<li><a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a></li>
+<li id="carbon"><a href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Carbon neutral since 2007</a></li>
+<li style=float:right><a href="#">Settings</a></li>
+<li style=float:right><a href="https://policies.google.com/terms?hl=en&fg=1">Terms</a><li>
+<li style=float:right><a href="https://policies.google.com/privacy?hl=en&fg=1">Privacy</a></li>
+</footer>
