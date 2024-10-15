@@ -1,0 +1,41 @@
+29
+
+Dreams 10 10 5 7 8 2 10 15 20 25 30
+Harmony 8 3 6 9 12 15 18 21 24
+Voyager 12 1 2 3 4 5 6 7 8 9 10 11 12
+Euphoria 15 15 7 9 11 13 15 17 19 21 23 25 27 29 31 33
+Wonderland 13 2 4 6 8 10 12 14 16 18 20 22 24 26
+Symphony 9 9 15 16 18 21 22 24 25 28
+Cascade 12 12 4 7 10 13 16 19 22 25 28 31 34
+Paradox 8 10 12 14 16 18 20 22 24
+Crescent 11 7 10 13 16 19 22 25 28 31 34 37
+Solitude 9 9 6 12 18 24 30 36 42 48
+Enigma 13 1 4 7 10 13 16 19 22 25 28 31 34 37
+Comet 8 9 18 27 36 45 54 63 72
+Infinity 10 6 12 18 24 30 36 42 48 54 60
+Astral 11 11 22 33 44 55 66 77 88 99 110 121
+Epiphany 9 2 4 6 8 10 12 14 16 18
+Nova 7 7 15 25 35 45 55 65
+Oracle 10 10 20 30 40 50 60 70 80 90 100
+Zenith 14 14 11 22 33 44 55 66 77 88 99 110 121 132 143
+Serenity 12 5 10 15 20 25 30 35 40 45 50 55 60
+Luminary 8 8 16 24 32 40 48 56 64
+Galaxy 15 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45
+Cosmos 10 12 24 36 48 60 72 84 96 108 120
+Tranquil 7 7 13 26 39 52 65 78
+Symmetry 9 9 14 28 42 56 70 84 98 112
+Eclipse 11 2 4 6 8 10 12 14 16 18 20 22
+Reverie 8 20 40 60 80 100 120 140 160
+Harmonize 12 7 14 21 28 35 42 49 56 63 70 77 84
+Empyrean 10 5 10 15 20 25 30 35 40 45 50
+Transcend 12 10 20 30 40 50 60 70 80 90 100 110 120
+
+2 Dreams O Paradox
+2 Euphoria A Crescent
+2 Euphoria O Cascade
+2 Serenity A Harmony
+2 Serenity O Cascade
+2 Epiphany A Voyager
+2 Wonderland O Astral
+3 Nova A Oracle A Zenith
+6 Galaxy O Tranquil O Symmetry A Cosmos A Empyrean A Crescent

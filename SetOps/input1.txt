@@ -1,0 +1,55 @@
+45
+
+Tranquil 10 2 5 18 22 7 4 1 13 9 20
+Symphony 9 11 24 3 14 6 21 8 17 23
+Catalyst 10 15 12 25 19 10 16 6 14 4 21
+Gratitude 13 8 23 11 18 25 2 9 22 5 17 15 3 20
+Perspective 10 7 24 19 12 1 13 16 10 23 8 
+Velocity 8 11 18 25 14 21 4 2 17 
+Chronology 11 9 22 5 15 24 7 20 12 19 3 13
+Dexterity 12 1 16 6 10 23 20 7 24 11 18 25 14
+Euphoria 13 21 4 2 17 9 22 5 15 3 19 12 1 13
+Solitude 9 16 8 10 6 25 18 11 24 8 
+Enlightenment 11 23 14 21 4 2 17 9 22 5 15 24 
+Compassionate 12 7 20 12 19 3 13 1 16 10 6 18 11
+Harmony 15 24 8 23 14 21 4 2 17 9 22 5 15 7 20 12
+Innovation 14 19 3 13 1 16 10 6 25 18 11 24 8 23 14 
+Perseverance 15 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1
+Resilience 12 22 5 15 7 20 12 19 3 13 1 16 10
+Magnitude 24 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1 16
+Ambiguity 17 10 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15
+Renaissance 25 7 20 12 19 3 13 1 16 10 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15
+Serendipity 16 7 20 12 19 3 13 1 16 10 6 25 18 11 24 8 23
+Altruism 25 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1 16 10 6 25 18 11 24 8 23
+Unison 12 10 6 25 18 11 24 8 23 14 21 4 2
+Creativity 19 17 9 22 5 15 7 20 12 19 3 13 1 16 10 6 25 18 11 24
+Exploration 20 8 23 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1 16 10
+Affinity 25 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1 16 10
+Juxtaposition 19 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7 20 12 
+Inspiration 14 19 3 13 1 16 10 6 25 18 11 24 8 23 14
+Dedication 25 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1 16 10 6 25 18 11 24 8 23 14 
+Transcendence 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13
+Epiphany 16 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7 20
+Veracity 16 12 19 3 13 1 16 10 6 25 18 11 24 8 23 14 21
+Momentum 13 4 2 17 9 22 5 15 7 20 12 19 3 13
+Wisdom 18 1 16 10 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5
+Nostalgia 16 15 7 20 12 19 3 13 1 16 10 6 25 18 11 24 8
+Diligence 11 19 3 13 1 16 10 6 25 18 11 24
+Resonance  21 13 1 16 10 6 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7
+Symbiosis 16 8 23 14 21 4 2 17 9 22 5 15 7 20 12 19 3
+Vibrance 20 25 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7 20 12 19 3 
+Serenity  19 23 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1 16 10 
+Endeavor 18 7 20 12 19 3 13 1 16 10 6 25 18 11 24 8 23 14 21
+Evocative 17 24 3 14 6 21 8 17 23 15 12 25 19 10 16 6 14 4
+Luminary 16 14 21 4 2 17 9 22 5 15 7 20 12 19 3 13 1
+Paradox 17 5 18 11 24 8 23 14 21 4 2 17 9 22 5 15 7 20 
+Tenacity 14 16 10 6 25 18 11 24 8 23 14 21 4 2 17
+Quintessential 15 8 23 14 21 4 2 17 9 22 5 15 7 20 12 19
+
+2 Paradox O Nostalgia
+3 Symbiosis A Epiphany O Serendipity
+4 Enlightenment A Unison O Resonance A Tranquil
+2 Renaissance A Ambiguity
+3 Vibrance A Luminary O Quintessential
+3 Diligence O Creativity O Perspective
+3 Exploration A Wisdom A Innovation 
