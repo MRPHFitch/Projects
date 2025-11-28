@@ -2,7 +2,7 @@
 This is a collection of course projects that I have worked on. 
 
 # Animation Mapper  
-The animation mapper is a GUI implementation of of trip log csv data file. The points are plotted on a GPS map and an animated tracker will highlight and show the path of the trip. Utilizes an executable JAR file. Beware of grumpy cat.  
+The animation mapper is a GUI implementation of a trip log csv data file. The points are plotted on a GPS map and an animated tracker will highlight and show the path of the trip. Utilizes an executable JAR file. Beware of grumpy cat.  
 
 # DOS  
 This is a python implementation of a basic graphing program that works through the stages of utilizing threading, then gRPC to create a Client-Server implementation. From there it scales up to a Client->Broker->Server, Multi-Client->Server, and finally a Client->Multi-Server. Nothing too fancy, just working with gRPC. A group of us worked on everything through the first 4 iterations. I alone did the Multi-Client and Multi-Server.  
