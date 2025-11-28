@@ -1,6 +1,9 @@
 # Projects
 This is a collection of course projects that I have worked on. 
 
+# Bastion
+This is a secure P2P messaging app that utilizes Signal Protocol for encrypted messages. The end result is an app that establishes a status code with every user. Each time the app is opened, the status code entered indicates safe or in need of rescue. If in a life or death situation, the app pulls up a fake calculator screen while recording 5-10 seconds of video and sends it to Law Enforcement. The recording provides the content and gps coordinates necessary for a response to provide the assistance the individual needs.
+
 # Animation Mapper  
 The animation mapper is a GUI implementation of a trip log csv data file. The points are plotted on a GPS map and an animated tracker will highlight and show the path of the trip. Utilizes an executable JAR file. Beware of grumpy cat.  
 
