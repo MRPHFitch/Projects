@@ -89,6 +89,7 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Account Created'),
+        centerTitle: true,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: widget.onBack,

@@ -36,6 +36,9 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
               'Enter your Status Code',
@@ -54,6 +57,11 @@ class _LoginPageState extends State<LoginPage> {
                   FilteringTextInputFormatter.digitsOnly,
                   LengthLimitingTextInputFormatter(1),
                 ],
+                onChanged: (val){
+                  if(val.length==1){
+                    _submit();
+                  }
+                },
                 onSubmitted: (_) => _submit(),
               ),
             ),
