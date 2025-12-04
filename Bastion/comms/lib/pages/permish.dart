@@ -21,14 +21,15 @@ class _PermissionPageState extends State<PermissionPage> {
   Future<void> _requestPermissions() async {
     final cameraStatus = await Permission.camera.request();
     final micStatus = await Permission.microphone.request();
+    final loc=await Permission.location.request();
 
-    if (cameraStatus.isGranted && micStatus.isGranted) {
+    if (cameraStatus.isGranted && micStatus.isGranted && loc.isGranted) {
       if (!mounted) return;
       Navigator.pushReplacementNamed(context, '/login');
     } else {
       setState(() {
         _checking = false;
-        _error = 'Camera and microphone permissions are required to continue.';
+        _error = 'Camera, microphone, and location permissions are required to continue.';
       });
     }
   }

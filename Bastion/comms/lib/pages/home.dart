@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Bastion'),
         automaticallyImplyLeading: false,
+        centerTitle: true,
         actions: [
           IconButton(
             icon: Icon(Icons.brightness_6),

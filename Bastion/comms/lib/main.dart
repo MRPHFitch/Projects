@@ -1,6 +1,5 @@
-import 'dart:convert';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_close_app/flutter_close_app.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'themes.dart';
 import 'models/messages.dart';
@@ -8,13 +7,18 @@ import 'widgets/threedots.dart';
 import 'pages/accountCreation.dart';
 import 'pages/permish.dart';
 import 'pages/login.dart';
+import 'pages/emergency.dart';
 import 'pages/home.dart';
 import 'pages/chats.dart';
 import 'pages/video.dart';
 import 'pages/burst.dart';
 
-void main() {
-  runApp(const BastionApp());
+List<CameraDescription>? cameras;
+
+Future<void> main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras=await availableCameras();
+  runApp(BastionApp());
 }
 
 class BastionApp extends StatefulWidget {
@@ -69,10 +73,11 @@ class BastionAppState extends State<BastionApp>{
               Navigator.pushReplacementNamed(context, '/home');
             }
             else if(int.parse(statusDigit)>=int.parse(danger)){
-              FlutterCloseApp.close();
+              Navigator.pushReplacementNamed(context, '/emergency');
             }
           },
         ),
+        '/emergency':(context)=>EmergencyPage(camera: cameras!.first),
         '/home': (context)=>HomePage(toggleTheme: toggleTheme),
         '/chats': (context)=>ChatPage(),
         '/video': (context)=>VideoPage(),
