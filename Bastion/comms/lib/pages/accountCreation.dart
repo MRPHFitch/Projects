@@ -68,13 +68,12 @@ class AccountCreationPage extends StatefulWidget {
 
 class _AccountCreationPageState extends State<AccountCreationPage> {
   int _step = 0;
-  String? _username;
-  String? _badgeId;
+  String? phoneNum;
 
   
   void _goToStep2(String username) {
     setState(() {
-      _username=username;
+      phoneNum=username;
       _step = 2;
     });
   }
@@ -85,13 +84,13 @@ class _AccountCreationPageState extends State<AccountCreationPage> {
     });
   }
 
-  Future<void> _completeAccount(String user, String badge) async {
+  Future<void> _completeAccount(String user) async {
     // Call backend to create account with _username
     try{
       final response=await http.post(
         Uri.parse('https://bastion.com/api/create-account'),
         headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'username':user, 'badgeID': badge}),
+        body: jsonEncode({'username':user}),
       );
       if(response.statusCode==200){
         widget.onAccountCreated();
@@ -110,11 +109,11 @@ class _AccountCreationPageState extends State<AccountCreationPage> {
     }
   }
 
-  void _onBadgeComplete(String badgeID){
+  void _onBadgeComplete(String phone){
     setState(() {
-      _badgeId=badgeID;
+      phoneNum=phone;
     });
-    _completeAccount(_username!, _badgeId!);
+    _completeAccount(phoneNum!);
   }
 
   @override
@@ -126,7 +125,7 @@ class _AccountCreationPageState extends State<AccountCreationPage> {
       return AccountCreationStep1(onNext: _goToStep2);
     } else {
       return AccountCreationStep2(
-        username: _username!,
+        username: phoneNum!,
         onComplete: _onBadgeComplete,
         onBack: _goBackToStep1,
       );

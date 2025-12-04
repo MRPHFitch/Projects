@@ -48,11 +48,11 @@ class BastionAppState extends State<BastionApp>{
           });
         }),
         '/login': (context) => LoginPage(
-          onSubmit: (badgeId, statusDigit) async {
+          onSubmit: (statusDigit) async {
             final response=await http.post(
               Uri.parse('https://bastion.com/api/login'),
               headers: {'Content Type':' application/json'},
-              body: jsonEncode({'badgeID':badgeId, 'statusCode': statusDigit,}),
+              body: jsonEncode({'statusCode': statusDigit,}),
             );
             if(response.statusCode==200){
               Navigator.pushReplacementNamed(context, '/home');
@@ -280,7 +280,7 @@ class _ChatHomeScreenState extends State<ChatHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Bastion Secure Chat"),
+        title: const Text("Sortie"),
         centerTitle: true,
         actions: [
           IconButton(

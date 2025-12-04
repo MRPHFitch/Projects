@@ -1,11 +1,7 @@
-import 'package:http/http.dart' as http;
-import 'dart:convert';
 import 'package:comms/widgets/digitentry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../models/treemanager.dart';
 
-final KaryForest forest = KaryForest();
 
 class AccountCreationStep2 extends StatefulWidget {
   final String username;
@@ -35,7 +31,6 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
   @override
   void initState() {
     super.initState();
-    _generateBadgeId();
   }
 
   @override
@@ -45,20 +40,6 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
     _notSafeController.dispose();
     _dangerController.dispose();
     super.dispose();
-  }
-
-  void _generateBadgeId() async {
-    final response= await http.post(
-      Uri.parse('https://backend.com/api/create-account'),
-      body: {
-        'username': widget.username,
-      },
-    );
-    if(response.statusCode==200){
-      setState(() {
-        _badgeId=jsonDecode(response.body)['badgeId'];
-      });
-    }
   }
 
   bool _isSingleDigit(String? value) {
@@ -120,29 +101,6 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      // Prominent Badge #
-                      const Text(
-                        'Your Badge ID#',
-                        style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                      ),
-                      const SizedBox(height: 12),
-                      Text(
-                        _badgeId ?? '',
-                        style: const TextStyle(
-                          fontSize: 40,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.orange,
-                          letterSpacing: 2,
-                        ),
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 16),
-                      const Text(
-                        'Please save this Badge ID# for future logins.',
-                        textAlign: TextAlign.center,
-                      ),
-                      const SizedBox(height: 32),
-
                       // Digit entries, centered and styled
                       _digitEntry(
                         label: 'Choose a digit to indicate you are All Clear',
@@ -150,21 +108,11 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
                       ),
                       const SizedBox(height: 20),
                       DigitEntryField(
-                        label: 'Choose a different digit to indicate you are Safe but Not Clear',
-                        controller: _safeNotClearController,
-                      ),
-                      const SizedBox(height: 20),
-                      DigitEntryField(
-                        label: 'Choose another different digit to indicate you are Not Safe, but don\'t need assistance',
-                        controller: _notSafeController,
-                      ),
-                      const SizedBox(height: 20),
-                      DigitEntryField(
                         label: 'Choose the last different digit to indicate you are in Immediate Danger and need assistance',
                         controller: _dangerController,
                       ),
                       const SizedBox(height: 24),
-                      const Text('You will input one status code at the end of your Badge ID in order to login',
+                      const Text('You will input one status code in order to login.',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 16,
                         color: Colors.orange,

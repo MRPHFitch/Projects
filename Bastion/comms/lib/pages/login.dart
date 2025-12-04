@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class LoginPage extends StatefulWidget {
-  final void Function(String code, dynamic statusCode) onSubmit;
+  final void Function(dynamic statusCode) onSubmit;
   const LoginPage({super.key, required this.onSubmit});
 
   @override
@@ -38,13 +38,12 @@ class _LoginPageState extends State<LoginPage> {
 
   void _submit() {
     final code = _controllers.map((c) => c.text).join();
-    if (code.length == 7 && code.runes.every((r) => r >= 48 && r <= 57)) {
-      final badgeId = code.substring(0, 6); // Parse Badge from status code
-      final statusDigit = code.substring(6, 7);
-      widget.onSubmit(badgeId, statusDigit);
+    if (code.length == 1 && code.runes.every((r) => r >= 48 && r <= 57)) {
+      final statusDigit = code;
+      widget.onSubmit(statusDigit);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Please enter all 7 digits.')),
+        const SnackBar(content: Text('Please enter just your status code.')),
       );
     }
   }
@@ -56,7 +55,7 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           children: [
             const Text(
-              'Enter your 7-digit Login Code',
+              'Enter your Status Code',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 24),
