@@ -10,37 +10,20 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  final List<TextEditingController> _controllers = List.generate(
-    7,
-    (_) => TextEditingController(),
-  );
-  final List<FocusNode> _focusNodes = List.generate(7, (_) => FocusNode());
+  final TextEditingController _controller = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
 
   @override
   void dispose() {
-    for (final c in _controllers) {
-      c.dispose();
-    }
-    for (final f in _focusNodes) {
-      f.dispose();
-    }
+    _controller.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
-  void _onChanged(int idx, String value) {
-    if (value.length == 1 && idx < 6) {
-      _focusNodes[idx + 1].requestFocus();
-    }
-    if (value.isEmpty && idx > 0) {
-      _focusNodes[idx - 1].requestFocus();
-    }
-  }
-
   void _submit() {
-    final code = _controllers.map((c) => c.text).join();
-    if (code.length == 1 && code.runes.every((r) => r >= 48 && r <= 57)) {
-      final statusDigit = code;
-      widget.onSubmit(statusDigit);
+    final code = _controller.text;
+    if (code.length == 1 && int.tryParse(code)!=null) {
+      widget.onSubmit(code);
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Please enter just your status code.')),
@@ -58,35 +41,27 @@ class _LoginPageState extends State<LoginPage> {
               'Enter your Status Code',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            const SizedBox(height: 24),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: List.generate(7, (idx) {
-                return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6),
-                  child: SizedBox(
-                    width: 44,
-                    child: TextField(
-                      controller: _controllers[idx],
-                      focusNode: _focusNodes[idx],
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(fontSize: 24),
-                      keyboardType: TextInputType.number,
-                      inputFormatters: [
-                        FilteringTextInputFormatter.digitsOnly,
-                        LengthLimitingTextInputFormatter(1),
-                      ],
-                      onChanged: (val) => _onChanged(idx, val),
-                      onSubmitted: (val) {
-                        if (idx == 6) _submit();
-                      },
-                    ),
-                  ),
-                );
-              }),
+               const SizedBox(height: 24),
+            SizedBox(
+              width: 48,
+              child: TextField(
+                controller: _controller,
+                focusNode: _focusNode,
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 24),
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly,
+                  LengthLimitingTextInputFormatter(1),
+                ],
+                onSubmitted: (_) => _submit(),
+              ),
             ),
             const SizedBox(height: 32),
-            ElevatedButton(onPressed: _submit, child: const Text('Login')),
+            ElevatedButton(
+              onPressed: _submit,
+              child: const Text('Login'),
+            ),
           ],
         ),
       ),

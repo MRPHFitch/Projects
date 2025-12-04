@@ -1,11 +1,12 @@
 import 'package:comms/widgets/digitentry.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
 class AccountCreationStep2 extends StatefulWidget {
   final String username;
-  final void Function(String badgeId) onComplete;
+  final void Function(String phoneNumber) onComplete;
   final VoidCallback onBack;
   const AccountCreationStep2({
     super.key,
@@ -21,25 +22,27 @@ class AccountCreationStep2 extends StatefulWidget {
 class _AccountCreationStep2State extends State<AccountCreationStep2> {
   final _formKey = GlobalKey<FormState>();
   final _allClearController = TextEditingController();
-  final _safeNotClearController = TextEditingController();
-  final _notSafeController = TextEditingController();
   final _dangerController = TextEditingController();
 
-  String? _badgeId;
   bool _isLoading = true;
 
   @override
   void initState() {
     super.initState();
+    _isLoading=false;
   }
 
   @override
   void dispose() {
     _allClearController.dispose();
-    _safeNotClearController.dispose();
-    _notSafeController.dispose();
     _dangerController.dispose();
     super.dispose();
+  }
+
+  Future<void> saveStatusCode(String allClear, String danger) async{
+    final pref=await SharedPreferences.getInstance();
+    await pref.setString('Clear status code', allClear);
+    await pref.setString('Danger status code', danger);
   }
 
   bool _isSingleDigit(String? value) {
@@ -108,7 +111,8 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
                       ),
                       const SizedBox(height: 20),
                       DigitEntryField(
-                        label: 'Choose the last different digit to indicate you are in Immediate Danger and need assistance',
+                        label: 'Choose another different digit to indicate you are in Immediate Danger and need assistance. '
+                        'Please ensure it is of greater value than All Clear',
                         controller: _dangerController,
                       ),
                       const SizedBox(height: 24),
@@ -123,10 +127,13 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
                       SizedBox(
                         width: double.infinity,
                         child: ElevatedButton(
-                          onPressed: () {
+                          onPressed: () async{
                             if (_formKey.currentState!.validate()) {
+                              final allClear=_allClearController.text;
+                              final danger=_dangerController.text;
+                              await saveStatusCode(allClear, danger);
                               // Save or process the digits as needed
-                              widget.onComplete(_badgeId!);
+                              widget.onComplete(widget.username);
                               Navigator.pushReplacementNamed(context, '/login');
                             }
                           },

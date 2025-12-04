@@ -1,10 +1,12 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:flutter_close_app/flutter_close_app.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'themes.dart';
 import 'models/messages.dart';
 import 'widgets/threedots.dart';
 import 'pages/accountCreation.dart';
+import 'pages/permish.dart';
 import 'pages/login.dart';
 import 'pages/home.dart';
 import 'pages/chats.dart';
@@ -36,26 +38,38 @@ class BastionAppState extends State<BastionApp>{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Bastion',
+      title: 'Sortie',
       theme: lightTheme,
       darkTheme: darkTheme,
       themeMode: theMode,
       initialRoute: isCreated?'/login':'/account',
       routes: {
         '/account': (context)=>AccountCreationPage(onAccountCreated: (){
-          setState(() {
-            isCreated=true;
-          });
-        }),
+            setState(() {
+              isCreated=true;
+            });
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>PermissionPage()),
+            );
+          },
+        ),
+        '/permish':(context)=>PermissionPage(),
         '/login': (context) => LoginPage(
           onSubmit: (statusDigit) async {
-            final response=await http.post(
-              Uri.parse('https://bastion.com/api/login'),
-              headers: {'Content Type':' application/json'},
-              body: jsonEncode({'statusCode': statusDigit,}),
+            final prefs=await SharedPreferences.getInstance();
+            final allClear=prefs.getString('Clear status code');
+            final danger=prefs.getString('Danger status code');
+            if (allClear == null || danger == null) {
+              // Handle the error: show a message or prevent login
+              ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Status codes not set. Please create an account.')),
             );
-            if(response.statusCode==200){
+              return;
+            }
+            if(int.parse(statusDigit)<=int.parse(allClear)){
               Navigator.pushReplacementNamed(context, '/home');
+            }
+            else if(int.parse(statusDigit)>=int.parse(danger)){
+              FlutterCloseApp.close();
             }
           },
         ),

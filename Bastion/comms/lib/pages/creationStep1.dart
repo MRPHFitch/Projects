@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class AccountCreationStep1 extends StatefulWidget {
-  final void Function(String username) onNext;
+  final void Function(String phoneNumber) onNext;
   const AccountCreationStep1({super.key, required this.onNext});
 
   @override
@@ -9,19 +10,37 @@ class AccountCreationStep1 extends StatefulWidget {
 }
 
 class _AccountCreationStep1State extends State<AccountCreationStep1> {
-  final _formKey = GlobalKey<FormState>();
-  final _usernameController = TextEditingController();
+  final List<TextEditingController> _controllers =
+      List.generate(9, (_) => TextEditingController());
+  final List<FocusNode> _focusNodes = List.generate(9, (_) => FocusNode());
 
   @override
   void dispose() {
-    _usernameController.dispose();
+    for (final c in _controllers) {
+      c.dispose();
+    }
+    for (final f in _focusNodes) {
+      f.dispose();
+    }
     super.dispose();
   }
 
+  void _onChanged(int idx, String value) {
+    if (value.length == 1 && idx < 8) {
+      _focusNodes[idx + 1].requestFocus();
+    }
+    if (value.isEmpty && idx > 0) {
+      _focusNodes[idx - 1].requestFocus();
+    }
+  }
+
   void _submit() {
-    if (_formKey.currentState!.validate()) {
-      widget.onNext(
-        _usernameController.text.trim()
+    final phone = _controllers.map((c) => c.text).join();
+    if (phone.length == 9 && phone.runes.every((r) => r >= 48 && r <= 57)) {
+      widget.onNext(phone);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Please enter a 9-digit phone number.')),
       );
     }
   }
@@ -35,29 +54,48 @@ class _AccountCreationStep1State extends State<AccountCreationStep1> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(24),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Step 1', style: Theme.of(context).textTheme.headlineSmall),
-              const SizedBox(height: 24),
-              TextFormField(
-                controller: _usernameController,
-                decoration: const InputDecoration(
-                  labelText: 'Username',
-                  border: OutlineInputBorder(),
-                ),
-                validator: (value) =>
-                  value == null || value.isEmpty ? 'Enter your unique Username' : null,
-              ),
-              const SizedBox(height: 24),
-              ElevatedButton(
-                onPressed: _submit,
-                child: const Text('Next'),
-              ),
-            ],
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Step 1', style: Theme.of(context).textTheme.headlineSmall),
+            const SizedBox(height: 24),
+            const Text(
+              'Enter your 9-digit Phone Number',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 24),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(9, (idx) {
+                return Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4),
+                  child: SizedBox(
+                    width: 44,
+                    child: TextField(
+                      controller: _controllers[idx],
+                      focusNode: _focusNodes[idx],
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(fontSize: 24),
+                      keyboardType: TextInputType.number,
+                      inputFormatters: [
+                        FilteringTextInputFormatter.digitsOnly,
+                        LengthLimitingTextInputFormatter(1),
+                      ],
+                      onChanged: (val) => _onChanged(idx, val),
+                      onSubmitted: (val) {
+                        if (idx == 8) _submit();
+                      },
+                    ),
+                  ),
+                );
+              }),
+            ),
+            const SizedBox(height: 32),
+            ElevatedButton(
+              onPressed: _submit,
+              child: const Text('Next'),
+            ),
+          ],
         ),
       ),
     );

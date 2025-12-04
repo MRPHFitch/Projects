@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'creationStep1.dart';
 import 'creationStep2.dart';
@@ -68,12 +67,12 @@ class AccountCreationPage extends StatefulWidget {
 
 class _AccountCreationPageState extends State<AccountCreationPage> {
   int _step = 0;
-  String? phoneNum;
+  String? phoneNumber;
 
   
-  void _goToStep2(String username) {
+  void _goToStep2(String phoneNum) {
     setState(() {
-      phoneNum=username;
+      phoneNumber=phoneNum;
       _step = 2;
     });
   }
@@ -84,36 +83,17 @@ class _AccountCreationPageState extends State<AccountCreationPage> {
     });
   }
 
-  Future<void> _completeAccount(String user) async {
-    // Call backend to create account with _username
-    try{
-      final response=await http.post(
-        Uri.parse('https://bastion.com/api/create-account'),
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({'username':user}),
-      );
-      if(response.statusCode==200){
-        widget.onAccountCreated();
-        Navigator.pushReplacementNamed(context, '\login');
-      }
-      else{
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Account creation failed: ${response.body}')),
-        );
-      }
-    }
-    catch(e){
-      ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Error: $e')),
-      );
-    }
+  void _completeAccount(String phoneNumber) {
+    // In P2P, just mark the account as created locally.
+    widget.onAccountCreated();
+    Navigator.pushReplacementNamed(context, '/login');
   }
 
-  void _onBadgeComplete(String phone){
+  void _onPhoneEntered(String phone){
     setState(() {
-      phoneNum=phone;
+      phoneNumber=phone;
     });
-    _completeAccount(phoneNum!);
+    _completeAccount(phoneNumber!);
   }
 
   @override
@@ -125,8 +105,8 @@ class _AccountCreationPageState extends State<AccountCreationPage> {
       return AccountCreationStep1(onNext: _goToStep2);
     } else {
       return AccountCreationStep2(
-        username: phoneNum!,
-        onComplete: _onBadgeComplete,
+        username: phoneNumber!,
+        onComplete: _onPhoneEntered,
         onBack: _goBackToStep1,
       );
     }
