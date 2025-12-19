@@ -75,18 +75,17 @@ class BastionAppState extends State<BastionApp>{
           onSubmit: (statusDigit) async {
             final prefs=await SharedPreferences.getInstance();
             final allClear=prefs.getString('Clear status code');
-            final danger=prefs.getString('Danger status code');
-            if (allClear == null || danger == null) {
+            if (allClear == null) {
               // Handle the error: show a message or prevent login
               ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(content: Text('Status codes not set. Please create an account.')),
             );
               return;
             }
-            if(int.parse(statusDigit)<=int.parse(allClear)){
+            if(int.parse(statusDigit)==int.parse(allClear)){
               Navigator.pushReplacementNamed(context, '/home');
             }
-            else if(int.parse(statusDigit)>=int.parse(danger)){
+            else if(int.parse(statusDigit)!=int.parse(allClear)){
               Navigator.pushReplacementNamed(context, '/emergency');
             }
           },

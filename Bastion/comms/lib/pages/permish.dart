@@ -18,8 +18,12 @@ class _PermissionPageState extends State<PermissionPage> {
   void initState() {
     super.initState();
     if (isDesktop || isWeb) {
-      //If it isn't mobile, skip status code and jump to home page
-      Navigator.pushReplacementNamed(context, '/home');
+      //If it isn't mobile, skip permissions
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) { // Ensure the widget is still mounted before navigating
+          Navigator.pushReplacementNamed(context, '/login');
+        }
+      });
     }
     else{
       // Proceed with requesting permissions for mobile

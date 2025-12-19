@@ -22,7 +22,6 @@ class AccountCreationStep2 extends StatefulWidget {
 class _AccountCreationStep2State extends State<AccountCreationStep2> {
   final _formKey = GlobalKey<FormState>();
   final _allClearController = TextEditingController();
-  final _dangerController = TextEditingController();
 
   bool _isLoading = true;
 
@@ -35,14 +34,12 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
   @override
   void dispose() {
     _allClearController.dispose();
-    _dangerController.dispose();
     super.dispose();
   }
 
-  Future<void> saveStatusCode(String allClear, String danger) async{
+  Future<void> saveStatusCode(String allClear) async{
     final pref=await SharedPreferences.getInstance();
     await pref.setString('Clear status code', allClear);
-    await pref.setString('Danger status code', danger);
   }
 
   bool _isSingleDigit(String? value) {
@@ -110,14 +107,8 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
                         label: 'Choose a digit to indicate you are All Clear',
                         controller: _allClearController,
                       ),
-                      const SizedBox(height: 20),
-                      DigitEntryField(
-                        label: 'Choose another different digit to indicate you are in Immediate Danger and need assistance. '
-                        'Please ensure it is of greater value than All Clear',
-                        controller: _dangerController,
-                      ),
                       const SizedBox(height: 24),
-                      const Text('You will input one status code in order to login.',
+                      const Text('You will input one digit in order to login. If safe, put the digit you chose, if in danger, put any other digit',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 16,
                         color: Colors.orange,
@@ -131,8 +122,7 @@ class _AccountCreationStep2State extends State<AccountCreationStep2> {
                           onPressed: () async{
                             if (_formKey.currentState!.validate()) {
                               final allClear=_allClearController.text;
-                              final danger=_dangerController.text;
-                              await saveStatusCode(allClear, danger);
+                              await saveStatusCode(allClear);
                               // Save or process the digits as needed
                               widget.onComplete(widget.username);
                               Navigator.pushReplacementNamed(context, '/login');
