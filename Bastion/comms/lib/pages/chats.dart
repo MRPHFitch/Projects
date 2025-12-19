@@ -8,6 +8,7 @@ class ChatPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text('Chats'),
+          centerTitle: true,
           bottom: TabBar(
             tabs: [
               Tab(text: 'Individual'),
@@ -18,8 +19,6 @@ class ChatPage extends StatelessWidget {
             IconButton(
               onPressed: null,
               icon: Icon(Icons.add)),
-              
-              
           ],
         ),
         body: TabBarView(

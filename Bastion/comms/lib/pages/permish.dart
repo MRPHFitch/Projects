@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
+import 'package:comms/utils/platformCheck.dart';
+
 
 class PermissionPage extends StatefulWidget {
   const PermissionPage({super.key});
@@ -15,7 +17,14 @@ class _PermissionPageState extends State<PermissionPage> {
   @override
   void initState() {
     super.initState();
-    _requestPermissions();
+    if (isDesktop || isWeb) {
+      //If it isn't mobile, skip status code and jump to home page
+      Navigator.pushReplacementNamed(context, '/home');
+    }
+    else{
+      // Proceed with requesting permissions for mobile
+      _requestPermissions();
+    }
   }
 
   Future<void> _requestPermissions() async {

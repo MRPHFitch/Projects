@@ -1,6 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:comms/utils/platformCheck.dart';
 import 'themes.dart';
 import 'models/messages.dart';
 import 'widgets/threedots.dart';
@@ -17,7 +18,20 @@ List<CameraDescription>? cameras;
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
-  cameras=await availableCameras();
+  if(isMobile){
+    try{
+      cameras=await availableCameras();
+    }
+    catch(e){
+      //No permissions granted or no camera found
+      debugPrint('Error getting cameras on mobile: $e');
+      cameras=[];
+    }
+  }
+  // For non mobile platforms
+  else{
+    cameras=[];
+  }
   runApp(BastionApp());
 }
 
