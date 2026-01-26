@@ -1,3 +1,4 @@
+import 'package:comms/pages/indChats.dart';
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatelessWidget {
@@ -23,7 +24,7 @@ class ChatPage extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            Center(child: Text('Individual Chats')), // Replace with your widget
+            IndChats(),
             Center(child: Text('Group Chats')),      // Replace with your widget
           ],
         ),
